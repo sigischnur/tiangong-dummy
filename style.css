@@ -166,3 +166,6 @@ section.benefits{background:linear-gradient(180deg,#fff 0%,#f3e8ff 100%)!importa
 .bic{width:74px;height:74px;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff}
 .bcard p{color:var(--soft)}
 @media(max-width:900px){.lotus{max-width:240px;margin:0 auto}.orb{display:none}.hero .vp{font-size:1.25rem}section.benefits{padding:80px 0}}
+.photo{margin:0;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px -28px rgba(75,29,122,.55);background:linear-gradient(135deg,#ffd1ec,#bff5ea);padding:10px}
+.photo img{display:block;width:100%;height:auto;border-radius:18px}
+.photo figcaption{text-align:center;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--magenta);padding:10px 0 4px}
