@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+<title>Tesla Anmeldung – nxmind</title>
+<style>body{font-family:system-ui,sans-serif;max-width:640px;margin:3rem auto;padding:0 1rem;color:#222;text-align:center}
+#code{font:600 1.4rem/1.4 ui-monospace,monospace;word-break:break-all;background:#f3f3f3;border-radius:8px;padding:1rem;margin:1.5rem 0}
+button{font-size:1.1rem;padding:.7rem 1.6rem;border:0;border-radius:8px;background:#111;color:#fff;cursor:pointer}.err{color:#b00}</style></head>
+<body><h1>Tesla Anmeldung</h1><div id="out"></div>
+<script>
+(function(){var p=new URLSearchParams(location.search),c=p.get('code'),s=p.get('state'),e=p.get('error'),o=document.getElementById('out');
+function t(tag,txt,cls){var n=document.createElement(tag);n.textContent=txt;if(cls)n.className=cls;o.appendChild(n);return n}
+if(e){t('p','Tesla meldet einen Fehler: '+e+(p.get('error_description')?' – '+p.get('error_description'):''),'err');return}
+if(!c){t('p','Kein Code in der Adresse gefunden.','err');return}
+if(s!=='27074f3c609aef38a96bf91365b0d562'){t('p','Sicherheitsprüfung fehlgeschlagen (state stimmt nicht). Bitte den Code nicht verwenden.','err');return}
+t('p','Bitte kopier diesen Code und füg ihn bei Anari ein.');t('div',c).id='code';
+var b=t('button','Code kopieren');b.onclick=function(){navigator.clipboard.writeText(c).then(function(){b.textContent='Kopiert ✓'},function(){var r=document.createRange();r.selectNodeContents(document.getElementById('code'));getSelection().removeAllRanges();getSelection().addRange(r);b.textContent='Markiert – bitte manuell kopieren'})};
+history.replaceState(null,'',location.pathname);})();
+</script></body></html>
