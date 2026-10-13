@@ -74,3 +74,20 @@ footer a{text-decoration:none;display:block;margin:.3rem 0}footer a:hover{color:
 @media(max-width:900px){nav ul{display:none;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--ivory);padding:24px 28px;gap:18px;border-bottom:1px solid rgba(180,154,94,.3)}nav ul.open{display:flex}.burger{display:block}
 .g3,.g2,footer .cols{grid-template-columns:1fr}.g2{gap:40px}.ex{grid-template-columns:1fr;gap:10px}section{padding:80px 0}.hero .enso{opacity:.35;right:-30vw;width:110vw}.btn.gold{margin:12px 0 0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.enso path{stroke-dashoffset:0}}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;position:relative;z-index:2}
+.hero .hero-art .enso{position:static;transform:none;width:100%;max-width:520px;opacity:.8;display:block;margin-left:auto}
+.g4{grid-template-columns:repeat(4,1fr)}a.card{text-decoration:none;display:block}
+.narrow{max-width:900px}
+.lead2{font-size:1.08rem}
+dl{display:grid;grid-template-columns:120px 1fr;gap:10px 24px;margin:1.6rem 0;font-size:.95rem}
+dt{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding-top:4px}dd{color:var(--soft)}
+.video{margin-top:1.8rem}.video iframe{width:100%;aspect-ratio:16/9;border:0;background:var(--mist)}
+.video span{display:block;font-size:.75rem;color:var(--soft);margin-top:6px;letter-spacing:.05em}
+@media(max-width:1000px){.g4{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero .hero-art{order:-1}.hero .hero-art .enso{width:200px;margin:0 auto}.g4{grid-template-columns:1fr}dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:10px}}
+nav ul{gap:22px}nav a{font-size:.78rem}
+nav a.zk-nav{color:var(--jade);padding:4px 10px;border:1px solid rgba(95,138,117,.45)}nav a.zk-nav:after{display:none}
+.zk{background:linear-gradient(180deg,#1b2629,#22332f)}.zk .k{color:var(--jade)}.zk h2{color:var(--ivory)}.zk .ex{border-color:rgba(95,138,117,.35)}
+.zk .page-head,.page-head.zk{padding-bottom:70px}.zk .eyebrow{color:var(--sage)}
+.zlist{margin:1rem 0 0 1.1rem;color:#cfd3cc}.zk .placeholder{color:#cfd3cc}
+@media(max-width:1180px){nav ul{gap:14px}nav a{font-size:.7rem;letter-spacing:.08em}}
