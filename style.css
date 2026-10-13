@@ -169,3 +169,9 @@ section.benefits{background:linear-gradient(180deg,#fff 0%,#f3e8ff 100%)!importa
 .photo{margin:0;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px -28px rgba(75,29,122,.55);background:linear-gradient(135deg,#ffd1ec,#bff5ea);padding:10px}
 .photo img{display:block;width:100%;height:auto;border-radius:18px}
 .photo figcaption{text-align:center;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--magenta);padding:10px 0 4px}
+.meadow{background:linear-gradient(180deg,#fff 0%,#e3f7f6 100%);line-height:0}
+.meadow svg{width:100%;height:clamp(140px,22vw,260px);display:block}
+.sway{animation:sway 6s ease-in-out infinite alternate}.sway:nth-of-type(3n){animation-delay:-2s}
+@keyframes sway{to{transform:rotate(6deg)}}
+.leafsep{display:flex;justify-content:center;margin-bottom:28px}.leafsep svg{width:220px}
+@media(max-width:900px){.ink .art{max-width:320px;margin:0 auto}.flowerband{padding:24px 0}}
