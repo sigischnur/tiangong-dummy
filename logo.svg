@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 92" role="img" aria-label="neXmind Academy">
+<defs><linearGradient id="nxg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f6bff"/><stop offset=".5" stop-color="#8b3df0"/><stop offset="1" stop-color="#ff3b5c"/></linearGradient>
+<linearGradient id="nxa" x1="0" x2="1"><stop offset="0" stop-color="#ff4a6b"/><stop offset="1" stop-color="#e0287a"/></linearGradient></defs>
+<g font-family="Montserrat,'Arial Black',sans-serif" font-weight="800" fill="#141a33">
+<text x="0" y="58" font-size="58" letter-spacing="-1">ne</text>
+<path d="M76 8h22l17 26 19-26h22l-30 40 31 22h-24l-19-12-20 12H70l30-23z" fill="url(#nxg)"/>
+<text x="150" y="58" font-size="58" letter-spacing="-1">mind</text></g>
+<path d="M4 80h56M242 80h56" stroke="url(#nxg)" stroke-width="2.5" stroke-linecap="round"/>
+<text x="151" y="86" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="800" font-size="15" letter-spacing="7" fill="#cd378a">ACADEMY</text>
+</svg>

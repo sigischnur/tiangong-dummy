@@ -91,3 +91,9 @@ nav a.zk-nav{color:var(--jade);padding:4px 10px;border:1px solid rgba(95,138,117
 .zk .page-head,.page-head.zk{padding-bottom:70px}.zk .eyebrow{color:var(--sage)}
 .zlist{margin:1rem 0 0 1.1rem;color:#cfd3cc}.zk .placeholder{color:#cfd3cc}
 @media(max-width:1180px){nav ul{gap:14px}nav a{font-size:.7rem;letter-spacing:.08em}}
+.brand .nxlogo{height:46px;width:auto}.brand .sub{font:300 .62rem "Jost";letter-spacing:.24em;text-transform:uppercase;color:var(--soft);max-width:120px;line-height:1.5;border-left:1px solid rgba(180,154,94,.4);padding-left:12px}
+footer .brand .nxlogo{height:58px}
+@media(max-width:600px){.brand .sub{display:none}.brand .nxlogo{height:40px}}
+nav a{white-space:nowrap}.brand .sub{display:none}
+
+@media(max-width:1180px){nav ul{gap:12px}}
