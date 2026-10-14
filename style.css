@@ -211,3 +211,13 @@ img,svg,iframe,video{max-width:100%}img{height:auto;display:block}
 @keyframes zkfloat{50%{transform:translateY(-8px)}}
 @media(prefers-reduced-motion:reduce){.zk-line,.zk-node,.zk-art img{animation:none}.zk .reveal,.zk-slide.reveal{transition:none;transform:none;opacity:1}}
 .zk .ex .k.zk-ico{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#7ff0d6;font-size:2rem}
+/* Biografie-Kapitel (meister.html) */
+.bio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:0 auto}
+.bio-card{background:#fff;border-radius:22px;padding:28px 26px;box-shadow:0 20px 50px -30px rgba(75,29,122,.45);border-top:4px solid var(--magenta);position:relative}
+.bio-card:nth-child(2){border-top-color:var(--saffron)}.bio-card:nth-child(3){border-top-color:var(--turq)}
+.bio-ico{display:inline-flex;width:46px;height:46px;align-items:center;justify-content:center;border-radius:50%;background:var(--rose);font-size:1.4rem;margin-bottom:10px}
+.bio-num{display:block;font-family:Montserrat,sans-serif;font-weight:800;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--magenta)}
+.bio-card h3{margin:.3rem 0 .6rem}.bio-card p{margin:0;color:var(--soft)}
+.bio-quote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.6rem;text-align:center;color:var(--jade);max-width:720px;margin:44px auto}
+.bio-quote cite{display:block;font-style:normal;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--magenta);margin-top:8px}
+@media(max-width:900px){.bio-grid{grid-template-columns:1fr}}

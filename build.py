@@ -138,6 +138,17 @@ for f,t in LEGAL: open(f,'w').write(page(f,t,B[f]))
 # --- Biografie + Zeitleiste direkt auf meister.html (v25) ---
 _bh=head('Großmeister','Datong Shizun','Lebensweg des Gründers von Tian Gong und Feng Huang Yuan.')
 BIO_BODY=B['biografie.html'][len(_bh):].replace('<section style="padding-top:20px">','<section id="biografie" style="padding-top:20px">',1)
+_cards=[('☯','Herkunft','Datong Shizun, früher Meister Le Tian, stammt aus China und lebt heute in den USA und in China. Er gründete Tian Gong, aus dem die Schule Feng Huang Yuan hervorging.'),
+('🌱','Kindheit & Krise','Aufgewachsen in Armut, als Kind oft krank, begann er früh mit Tai Ji und Qigong. Ab 1979 brachen mehrere schwere Krankheiten aus – zwei Jahre lang schwebte er zwischen Leben und Tod.'),
+('🔔','Heilung durch die Bronzeglocke','1982 lernte er bei Meister Mǎ Yǒu Zhōng die Bronzeglockenübung und wurde binnen eines halben Jahres gesund. Er begann zu unterrichten und Xiu Lian zu praktizieren. 1987 versprach er, sein Leben der chinesischen Energieheilung zu widmen.'),
+('⛩','Gründung von Tian Gong','1989 gründete er auf Basis der rund 1.400 Jahre alten Bronzeglockenübung die Schule Tian Gong. Es folgten Vorträge auf Qigong-Konferenzen, 1992 in Tokio, eine Reise durch fast 20 Provinzen, zwei Auszeichnungen als „Herausragender Qigong-Meister“ und 1994 eine TV-Dokumentation.'),
+('🌍','Der Weg in den Westen','1995 reiste er durch sechs europäische Länder und in die USA, wo er seither lebt. Forschungsreisen führten ihn in über 40 Länder – von den Osterinseln bis an den Polarkreis.'),
+('🕊','Drei Rettungen & Feng Huang Yuan','2003 empfing er in Berlin die Botschaft der „Drei Rettungen“. 2011 wurde Tian Gong zum System Feng Huang Yuan weiterentwickelt. Bis 2017 gab er Seminare und Retreats in Europa, Südamerika und Asien. Heute leitet Sigmar Schnur die Schule.')]
+def _card(i,c): return f'<article class="bio-card reveal"><span class="bio-ico" aria-hidden="true">{c[0]}</span><span class="bio-num">Kapitel {i+1}</span><h3>{c[1]}</h3><p>{c[2]}</p></article>'
+_q1='<blockquote class="bio-quote reveal">„Die Erde retten, alle Menschen retten, sich selbst retten.“<cite>Die Drei Rettungen</cite></blockquote>'
+_q2='<blockquote class="bio-quote reveal">Aus eigenem Leid erwuchs ein tiefes Mitgefühl für das Leid der Menschen.</blockquote>'
+_bio='<section id="biografie" style="padding-top:20px"><div class="wrap"><div class="reveal" style="text-align:center;margin-bottom:40px"><span class="eyebrow">Biografie</span><h2>Der Lebensweg von Datong Shizun</h2></div><div class="bio-grid">'+''.join(_card(i,c) for i,c in enumerate(_cards[:3]))+'</div>'+_q2+'<div class="bio-grid">'+''.join(_card(i+3,c) for i,c in enumerate(_cards[3:]))+'</div>'+_q1+'<p class="placeholder" style="text-align:center">Quelle: <a href="https://fhyuan.de/?page_id=448" rel="noopener">fhyuan.de – Großmeister Datong Shizun</a>. Die Darstellung gibt die Sicht der Schule wieder.</p></div></section>'
+BIO_BODY=_bio+BIO_BODY[BIO_BODY.index('</section>')+len('</section>'):]
 _m=B['meister.html']
 _cut='</div></div></section><section class="paper">'
 _m=_m.replace(_cut,'</div></div></section>'+BIO_BODY+'<section class="paper">',1)
