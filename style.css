@@ -210,3 +210,4 @@ img,svg,iframe,video{max-width:100%}img{height:auto;display:block}
 .zk-art img{animation:zkfloat 7s ease-in-out infinite}
 @keyframes zkfloat{50%{transform:translateY(-8px)}}
 @media(prefers-reduced-motion:reduce){.zk-line,.zk-node,.zk-art img{animation:none}.zk .reveal,.zk-slide.reveal{transition:none;transform:none;opacity:1}}
+.zk .ex .k.zk-ico{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#7ff0d6;font-size:2rem}
