@@ -11,12 +11,14 @@ MEADOW='<div class="meadow" aria-hidden="true"><svg viewBox="0 0 1440 260" prese
 LEAF='<div class="leafsep" aria-hidden="true"><svg viewBox="0 0 240 40"><path d="M10 20 H95 M145 20 H230" stroke="#c2187a" stroke-width="1.5" opacity=".5"/><path d="M120 6 C108 14 108 26 120 34 C132 26 132 14 120 6z" fill="#14a3a8"/><path d="M120 20 C100 10 92 18 96 24 C104 28 114 24 120 20z" fill="#f4a425"/><path d="M120 20 C140 10 148 18 144 24 C136 28 126 24 120 20z" fill="#c2187a"/></svg></div>'
 import hashlib
 VER=hashlib.md5(open('style.css','rb').read()+open('main.js','rb').read()).hexdigest()[:8]
+import json as _j
+LD='<script type="application/ld+json">'+_j.dumps(_j.load(open("jsonld.json")),ensure_ascii=False)+'</script>'
 def page(fn,title,body):
   nav=''.join(f'<li><a href="{f}" class="{'active ' if f==fn else ''}{'zk-nav' if f=='zukunft.html' else ''}">{SHORT.get(f,t)}</a></li>' for f,t in PAGES)
   return f'''<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title} · neXmind Academy</title><meta name="description" content="Qigong, Energiearbeit und ganzheitliche Themen – neXmind Academy">
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="style.css?v={VER}"><link rel="icon" type="image/svg+xml" href="favicon.svg"></head><body>
+<link rel="stylesheet" href="style.css?v={VER}"><link rel="icon" type="image/svg+xml" href="favicon.svg">{LD if fn=="index.html" else ""}</head><body>
 <header><div class="wrap nav"><a class="brand" href="index.html"><img src="logo.svg" alt="neXmind Academy" class="nxlogo"><span class="sub">Spiritualität · Gesundheit · Zukunft</span></a>
 <nav><button class="burger" aria-label="Menü"><span></span><span></span></button><ul>{nav}</ul></nav></div></header>
 <main>{body}</main>{MEADOW}
