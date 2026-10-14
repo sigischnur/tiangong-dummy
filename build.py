@@ -14,17 +14,17 @@ VER=hashlib.md5(open('style.css','rb').read()+open('main.js','rb').read()).hexdi
 def page(fn,title,body):
   nav=''.join(f'<li><a href="{f}" class="{'active ' if f==fn else ''}{'zk-nav' if f=='zukunft.html' else ''}">{SHORT.get(f,t)}</a></li>' for f,t in PAGES)
   return f'''<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{title} · neXmind Academy</title><meta name="description" content="Qigong, Energiearbeit und ganzheitliche Themen – Tiangong Studio (Demo)">
+<title>{title} · neXmind Academy</title><meta name="description" content="Qigong, Energiearbeit und ganzheitliche Themen – neXmind Academy">
 <link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="style.css?v={VER}"><link rel="icon" type="image/svg+xml" href="favicon.svg"></head><body>
 <header><div class="wrap nav"><a class="brand" href="index.html"><img src="logo.svg" alt="neXmind Academy" class="nxlogo"><span class="sub">Spiritualität · Gesundheit · Zukunft</span></a>
 <nav><button class="burger" aria-label="Menü"><span></span><span></span></button><ul>{nav}</ul></nav></div></header>
 <main>{body}</main>{MEADOW}
 <footer><div class="wrap"><div class="cols"><div><a class="brand" href="index.html"><img src="logo-light.svg" alt="neXmind Academy" class="nxlogo"></a>
-<p style="margin-top:1rem;max-width:380px">„NX Mind Academy inspires lifelong well-being, wisdom, peace, compassion, joy and enlightenment.“</p><span class="demo">Demo-Website · Entwurf</span></div>
+<p style="margin-top:1rem;max-width:380px">„NX Mind Academy inspires lifelong well-being, wisdom, peace, compassion, joy and enlightenment.“</p></div>
 <div><h4>Seiten</h4>{''.join(f'<a href="{f}">{t}</a>' for f,t in PAGES)}</div>
 <div><h4>Kontakt</h4><p>Sigmar [Nachname]<br>[Ort / Adresse]<br>[E-Mail]</p></div></div>
-<p class="disclaimer"><strong>Hinweis:</strong> Die hier beschriebenen Übungen und Angebote dienen dem allgemeinen Wohlbefinden und der Entspannung. Sie ersetzen keine ärztliche oder psychotherapeutische Diagnose und Behandlung; es werden keine Heilversprechen gegeben. Bei gesundheitlichen Beschwerden wende dich bitte an Ärztin oder Arzt.<br>Diese Seite ist ein Gestaltungsentwurf (Dummy). Texte in eckigen Klammern und markierte Platzhalter sind noch nicht final.</p><p class="legal-links" style="margin-top:.8rem"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p></div></footer>
+<p class="disclaimer"><strong>Hinweis:</strong> Die hier beschriebenen Übungen und Angebote dienen dem allgemeinen Wohlbefinden und der Entspannung. Sie ersetzen keine ärztliche oder psychotherapeutische Diagnose und Behandlung; es werden keine Heilversprechen gegeben. Bei gesundheitlichen Beschwerden wende dich bitte an Ärztin oder Arzt.</p><p class="legal-links" style="margin-top:.8rem"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p></div></footer>
 <script src="main.js?v={VER}"></script></body></html>'''
 def head(eb,h,p):
   return f'<section class="page-head"><svg class="ring" viewBox="0 0 600 600" fill="none"><circle cx="300" cy="300" r="240" stroke="#b49a5e" stroke-width=".8"/><circle cx="300" cy="300" r="180" stroke="#a9bfa8" stroke-width=".8"/></svg><div class="wrap reveal"><span class="eyebrow">{eb}</span><h1>{h}</h1><p>{p}</p></div></section>'
