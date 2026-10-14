@@ -23,7 +23,7 @@ def page(fn,title,body):
 <footer><div class="wrap"><div class="cols"><div><a class="brand" href="index.html"><img src="logo-light.svg" alt="neXmind Academy" class="nxlogo"></a>
 <p style="margin-top:1rem;max-width:380px">„neXmind Academy inspires lifelong well-being, wisdom, peace, compassion, joy and enlightenment.“</p></div>
 <div><h4>Seiten</h4>{''.join(f'<a href="{f}">{t}</a>' for f,t in PAGES)}</div>
-<div><h4>Kontakt</h4><p>Sigmar [Nachname]<br>[Ort / Adresse]<br>[E-Mail]</p></div></div>
+<div><h4>Kontakt</h4><p>Sigmar Schnur<br>Waagner-Biro-Str. 126/1/30<br>8020 Graz, Österreich<br><a href="mailto:info@nxmind.at">info@nxmind.at</a></p></div></div>
 <p class="disclaimer"><strong>Hinweis:</strong> Die hier beschriebenen Übungen und Angebote dienen dem allgemeinen Wohlbefinden und der Entspannung. Sie ersetzen keine ärztliche oder psychotherapeutische Diagnose und Behandlung; es werden keine Heilversprechen gegeben. Bei gesundheitlichen Beschwerden wende dich bitte an Ärztin oder Arzt.</p><p class="legal-links" style="margin-top:.8rem"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p></div></footer>
 <script src="main.js?v={VER}"></script></body></html>'''
 def head(eb,h,p):
