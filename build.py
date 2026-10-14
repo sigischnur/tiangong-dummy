@@ -15,8 +15,7 @@ def page(fn,title,body):
   nav=''.join(f'<li><a href="{f}" class="{'active ' if f==fn else ''}{'zk-nav' if f=='zukunft.html' else ''}">{SHORT.get(f,t)}</a></li>' for f,t in PAGES)
   return f'''<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title} · neXmind Academy</title><meta name="description" content="Qigong, Energiearbeit und ganzheitliche Themen – Tiangong Studio (Demo)">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="style.css?v={VER}"><link rel="icon" type="image/svg+xml" href="favicon.svg"></head><body>
 <header><div class="wrap nav"><a class="brand" href="index.html"><img src="logo.svg" alt="neXmind Academy" class="nxlogo"><span class="sub">Spiritualität · Gesundheit · Zukunft</span></a>
 <nav><button class="burger" aria-label="Menü"><span></span><span></span></button><ul>{nav}</ul></nav></div></header>
