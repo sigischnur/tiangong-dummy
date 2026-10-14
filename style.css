@@ -222,3 +222,4 @@ img,svg,iframe,video{max-width:100%}img{height:auto;display:block}
 .bio-quote cite{display:block;font-style:normal;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--magenta);margin-top:8px}
 @media(max-width:900px){.bio-grid{grid-template-columns:1fr}}
 .sigmar-box{border-left:2px solid var(--saffron);background:rgba(244,164,37,.12);padding:14px 20px;margin:1.2rem 0;border-radius:0 12px 12px 0}.sigmar-box p{margin:.5rem 0}
+.bio-source{text-align:center;font-size:.85rem;color:var(--soft);margin-top:1rem}
