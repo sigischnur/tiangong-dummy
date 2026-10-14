@@ -192,3 +192,21 @@ img,svg,iframe,video{max-width:100%}img{height:auto;display:block}
 .tl-year{display:inline-block;font-family:Montserrat,sans-serif;font-weight:800;font-size:.85rem;letter-spacing:.12em;color:var(--magenta);background:var(--rose);padding:3px 12px;border-radius:99px;margin-bottom:6px}
 .tl-item p{margin:0;color:var(--soft)}
 @media(max-width:700px){.timeline::before{left:12px}.tl-item,.tl-item:nth-child(even){width:100%;left:0;text-align:left;padding:0 0 28px 42px}.tl-item:nth-child(odd)::after,.tl-item:nth-child(even)::after{left:4px;right:auto}}
+/* KI & Zukunft – lebendige Gestaltung */
+.zk{position:relative;overflow:hidden}
+.zk-flow{position:absolute;left:0;right:0;top:0;height:120px;opacity:.6;pointer-events:none}
+.zk-flow svg{width:100%;height:100%}
+.zk-line{fill:none;stroke:#7ff0d6;stroke-width:1.5;stroke-dasharray:10 14;animation:zkflow 18s linear infinite}
+.zk-node{fill:#ffd36b;transform-box:fill-box;transform-origin:center;animation:zkpulse 3.2s ease-in-out infinite}
+.zk-node:nth-of-type(2){animation-delay:1s}.zk-node:nth-of-type(3){animation-delay:2s}
+@keyframes zkflow{to{stroke-dashoffset:-480}}
+@keyframes zkpulse{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.6);opacity:1}}
+.zk .zk-ico{display:flex;flex-direction:column;align-items:center;gap:4px}
+.zk .zk-ico svg{width:46px;height:46px;padding:8px;border-radius:50%;background:rgba(127,240,214,.12);box-shadow:0 0 0 1px rgba(127,240,214,.3)}
+.zk .zk-ico span{font-size:.8rem;letter-spacing:.12em}
+.zk-slide.reveal{transform:translateX(-36px)}.zk-slide.reveal:nth-of-type(even){transform:translateX(36px)}.zk-slide.reveal.in{transform:none}
+.zk-art{margin:10px auto 30px;max-width:520px}.zk-art img{width:100%;height:auto;display:block}
+.zk-tree{max-width:260px}
+.zk-art img{animation:zkfloat 7s ease-in-out infinite}
+@keyframes zkfloat{50%{transform:translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){.zk-line,.zk-node,.zk-art img{animation:none}.zk .reveal,.zk-slide.reveal{transition:none;transform:none;opacity:1}}

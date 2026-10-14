@@ -86,6 +86,19 @@ B['zukunft.html']=f'''<section class="page-head ink zk"><div class="wrap reveal"
 <div class="ex reveal"><div class="k">06</div><div><h2>Innere Vorbereitung</h2><p>Die beste Vorbereitung auf eine schnelle Welt ist ein ruhiger Geist. Achtsamkeit hilft, nicht von jeder Nachricht mitgerissen zu werden. Mitgefühl erinnert uns daran, dass hinter jeder Technik Menschen stehen. Tägliche Praxis – ein paar Minuten Stille, die vier wahren Worte, Bewegung – stärkt die Mitte, aus der heraus wir gut entscheiden.</p><ul class="zlist"><li>Bewusst mit Technik umgehen: Sie dient mir, nicht ich ihr.</li><li>Neugierig bleiben und lernen – in jedem Alter.</li><li>Beziehungen pflegen, die kein Bildschirm ersetzt.</li><li>Gutes säen: Was wir heute tun, prägt die Welt von morgen.</li></ul></div></div>
 <div class="quote reveal" style="padding:60px 0 20px"><blockquote style="color:var(--ivory)">„Die Zukunft ist kein Ort, an den wir gehen – sie ist ein Ort, den wir erschaffen.“</blockquote><cite>Gedanke zum Mitnehmen</cite></div>
 {P("Sigmars persönliche Gedanken und mögliche Abende/Gesprächskreise zum Thema. [Text folgt]")}</div></section>'''
+
+# --- KI & Zukunft: lebendigere Gestaltung (Text unverändert) ---
+ZI=['<circle cx="23" cy="23" r="15"/><path d="M8 23h30M23 8c6 6 6 24 0 30M23 8c-6 6-6 24 0 30"/>','<rect x="12" y="12" width="22" height="22" rx="4"/><path d="M18 6v6M28 6v6M18 34v6M28 34v6M6 18h6M6 28h6M34 18h6M34 28h6"/><circle cx="23" cy="23" r="4"/>','<path d="M23 40V22"/><path d="M23 26c-8 0-12-6-12-12 8 0 12 5 12 12zM23 22c0-8 5-12 12-12 0 8-5 12-12 12z"/>','<path d="M23 6 40 38H6z"/><path d="M23 18v10M23 32v1"/>','<circle cx="14" cy="16" r="5"/><circle cx="32" cy="16" r="5"/><path d="M6 36c0-6 4-10 8-10s8 4 8 10M24 36c0-6 4-10 8-10s8 4 8 10"/>','<path d="M23 38c-10-6-15-12-15-20a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 8-5 14-15 20z"/>']
+z=B['zukunft.html']
+for i,svg in enumerate(ZI):
+  k=f'<div class="k">0{i+1}</div>'
+  z=z.replace(k,f'<div class="k zk-ico"><svg viewBox="0 0 46 46" fill="none" stroke="#7ff0d6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{svg}</svg><span>0{i+1}</span></div>',1)
+z=z.replace('<div class="ex reveal">','<div class="ex reveal zk-slide">')
+z=z.replace('<section class="ink zk" style="padding-top:20px"><div class="wrap narrow">','<section class="ink zk" style="padding-top:20px"><div class="zk-flow" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="zk-line" d="M0 80C240 20 400 110 720 60S1200 20 1440 70"/><circle class="zk-node" cx="360" cy="62" r="5"/><circle class="zk-node" cx="720" cy="60" r="6"/><circle class="zk-node" cx="1080" cy="46" r="5"/></svg></div><div class="wrap narrow"><figure class="zk-art reveal"><img src="zk-net.svg" alt="" width="600" height="360" loading="lazy" decoding="async"></figure>',1)
+parts=z.split('<div class="ex reveal zk-slide"><div class="k zk-ico">')
+if len(parts)>4: parts[4]='<figure class="zk-art zk-tree reveal"><img src="zk-tree.svg" alt="" width="400" height="400" loading="lazy" decoding="async"></figure>'.join([''])+parts[4]
+z='<div class="ex reveal zk-slide"><div class="k zk-ico">'.join(parts[:4])+'<figure class="zk-art zk-tree reveal"><img src="zk-tree.svg" alt="" width="400" height="400" loading="lazy" decoding="async"></figure><div class="ex reveal zk-slide"><div class="k zk-ico">'+'<div class="ex reveal zk-slide"><div class="k zk-ico">'.join(parts[4:])
+B['zukunft.html']=z
 for f,t in PAGES: open(f,'w').write(page(f,t,B[f]))
 
 # --- Rechtliche Seiten (nicht in der Hauptnavigation) ---
