@@ -87,3 +87,10 @@ B['zukunft.html']=f'''<section class="page-head ink zk"><div class="wrap reveal"
 <div class="quote reveal" style="padding:60px 0 20px"><blockquote style="color:var(--ivory)">„Die Zukunft ist kein Ort, an den wir gehen – sie ist ein Ort, den wir erschaffen.“</blockquote><cite>Gedanke zum Mitnehmen</cite></div>
 {P("Sigmars persönliche Gedanken und mögliche Abende/Gesprächskreise zum Thema. [Text folgt]")}</div></section>'''
 for f,t in PAGES: open(f,'w').write(page(f,t,B[f]))
+
+# --- Rechtliche Seiten (nicht in der Hauptnavigation) ---
+LEGAL=[('impressum.html','Impressum')]
+def LP(eb,h,inner): return head(eb,h,'')+f'<section style="padding-top:20px"><div class="wrap narrow legal reveal">{inner}</div></section>'
+B['impressum.html']=LP('Rechtliches','Impressum','<h2>Impressum</h2><p>Geschäftsbezeichnung: NeXmind<br>Inhaber: Sigmar Schnur<br>Waagner-Biro-Str. 126/1/30<br>8020 Graz<br>Österreich</p><p>UID: ATU83080167</p><p>Mitglied der Wirtschaftskammer Steiermark (WKO)<br>Zuständige Gewerbebehörde: Magistrat der Stadt Graz<br>Anwendbare Rechtsvorschriften: Gewerbeordnung, abrufbar im Rechtsinformationssystem des Bundes (<a href="https://www.ris.bka.gv.at" rel="noopener">RIS</a>).<br>Unternehmensgegenstand: Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik</p><p>E-Mail: <a href="mailto:info@nxmind.at">info@nxmind.at</a></p><p>Medieninhaber und Herausgeber: Sigmar Schnur</p>')
+for f,t in LEGAL: open(f,'w').write(page(f,t,B[f]))
+
